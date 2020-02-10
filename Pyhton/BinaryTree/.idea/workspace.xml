@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8e6c2d0-d74e-456e-9c97-df32ed06f50c" name="Default Changelist" comment="" />
+    <list default="true" id="7f7279eb-60cc-42cf-96dc-a868a9289aba" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,11 +18,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1Xbq9qHTeSUL9t2myOfQRfiTj1D" />
+  <component name="ProjectId" id="1XbxGktp0jG3DtG7FIRHjBYrEAg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Color" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -38,8 +38,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Color" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Color" />
+    <configuration name="BinaryTree" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="BinaryTree" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -51,7 +51,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Color.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BinaryTree.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -62,7 +62,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Color" />
+        <item itemvalue="Python.BinaryTree" />
       </list>
     </recent_temporary>
   </component>
@@ -71,13 +71,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b8e6c2d0-d74e-456e-9c97-df32ed06f50c" name="Default Changelist" comment="" />
-      <created>1581324992621</created>
+      <changelist id="7f7279eb-60cc-42cf-96dc-a868a9289aba" name="Default Changelist" comment="" />
+      <created>1581328501890</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1581324992621</updated>
-      <workItem from="1581324994996" duration="3473000" />
-      <workItem from="1581328721359" duration="1353000" />
+      <updated>1581328501890</updated>
+      <workItem from="1581328503171" duration="11007000" />
     </task>
     <servers />
   </component>
@@ -89,15 +88,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Color$Color.coverage" NAME="Color Coverage Results" MODIFIED="1581326178262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BinaryTree$BinaryTree.coverage" NAME="BinaryTree Coverage Results" MODIFIED="1581339876315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
