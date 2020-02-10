@@ -1,0 +1,3 @@
+ting der skal skrives inden jeg kan få mappen til at virke rigtigt
+C:\Users\ravn1\Desktop>python_inver\Scripts\activate.bat
+(mappen ligge i C:\Users\ravn1\Desktop)
