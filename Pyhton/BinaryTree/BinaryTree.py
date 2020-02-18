@@ -120,7 +120,10 @@ tree.remove_value(50)
 
 tree.add_list()
 print(tree.return_b())
+
 print("")
+
+c.sort()
 print(c)
 
 
