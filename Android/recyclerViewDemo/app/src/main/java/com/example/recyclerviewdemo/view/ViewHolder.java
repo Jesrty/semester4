@@ -47,6 +47,12 @@ public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickL
         });
 
         textView.setOnClickListener(this);
+
+
+
+
+
+
     }
 
     public void setData(int row){
@@ -72,10 +78,6 @@ public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickL
 
 
     }
-
-
-
-
 
     @Override
     public void onClick(View v) {

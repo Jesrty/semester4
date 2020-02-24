@@ -5,13 +5,20 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 
 import com.example.recyclerviewdemo.ad.MyRecycleViewAdapter;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+
+import static com.example.recyclerviewdemo.Storage.NoteStorage.readNotesFromFile;
+import static com.example.recyclerviewdemo.Storage.NoteStorage.saveNotesToFile;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(myRecycleViewAdapter);
 
 
+
+
     }
 
     private ArrayList<String> getList(){
@@ -56,8 +65,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        saveNotesToFile();
+    }
 
-
-
-
+    @Override
+    protected void onPause() {
+        super.onPause();
+        readNotesFromFile();
+    }
 }

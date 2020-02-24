@@ -1,3 +1,10 @@
 ting der skal skrives inden jeg kan få mappen til at virke rigtigt
 C:\Users\ravn1\Desktop>python_inver\Scripts\activate.bat
 (mappen ligge i C:\Users\ravn1\Desktop)
+
+
+
+DOCTEST (husk """bla bla""")
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(verbose=True, optionflags=doctest.ELLIPSIS)

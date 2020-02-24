@@ -1,6 +1,10 @@
 package com.example.recyclerviewdemo.Model;
 
-public class Note {
+import java.io.Serializable;
+
+public class Note implements Serializable {
+
+    static final long serialVersionUID = 42;
     public String headline;
     public String body;
     private  boolean liked = false;
@@ -16,4 +20,8 @@ public class Note {
     public boolean getLiked(){
         return liked;
     }
+
+
+
+
 }

@@ -32,7 +32,7 @@ public class MyRecycleViewAdapter extends RecyclerView.Adapter<ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.setData(position);
-        //holder.textView.setText(list.get(position));      bliver placeret et andet sted!
+        //holder.textView.setText(list.get(position));      er placeret et andet sted istedet for!!!
     }
 
     @Override
