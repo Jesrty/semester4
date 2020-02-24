@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.recyclerviewdemo.R;
+import com.example.recyclerviewdemo.Storage.NoteStorage;
 import com.example.recyclerviewdemo.view.ViewHolder;
 
 import java.util.ArrayList;
@@ -30,11 +31,12 @@ public class MyRecycleViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.textView.setText(list.get(position));
+        holder.setData(position);
+        //holder.textView.setText(list.get(position));      bliver placeret et andet sted!
     }
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return NoteStorage.getlength();
     }
 }
