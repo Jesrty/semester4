@@ -22,19 +22,14 @@ class AutoFiller:
         return self.my_board
 
     def grid_fill(self):
-        number_x = 0
+        number_x = 1
         number_y = 0
-        print(type(number_x))
-        print(type(number_y))
         for x in self.my_board:
             for y in x:
-                print(type(number_x))
-                print(type(number_y))
                 self.my_board[number_x][number_y] = 1
-                self.my_board[0][2] = 1
-                self.my_board[4][0] = 1
                 number_y += 1
             number_x += 1
+            number_y = 0
 
     def print_grid(self):
         for x in self.my_board:

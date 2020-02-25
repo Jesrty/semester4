@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 
+import com.example.recyclerviewdemo.Storage.FileStorage;
+import com.example.recyclerviewdemo.Storage.NoteStorage;
 import com.example.recyclerviewdemo.ad.MyRecycleViewAdapter;
 
 import java.io.File;
@@ -19,6 +21,7 @@ import java.util.ArrayList;
 
 import static com.example.recyclerviewdemo.Storage.NoteStorage.readNotesFromFile;
 import static com.example.recyclerviewdemo.Storage.NoteStorage.saveNotesToFile;
+import static com.example.recyclerviewdemo.Storage.NoteStorage.setFileStorage;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> list;
     private MyRecycleViewAdapter myRecycleViewAdapter;
     private int postionHolder = -1;
+
 
 
     @Override
@@ -41,9 +45,18 @@ public class MainActivity extends AppCompatActivity {
         myRecycleViewAdapter = new MyRecycleViewAdapter(getList());
         recyclerView.setAdapter(myRecycleViewAdapter);
 
+        NoteStorage.setFileStorage(new FileStorage(this));
+        NoteStorage.saveNotesToFile();
 
 
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        NoteStorage.readNotesFromFile();
+        myRecycleViewAdapter.notifyDataSetChanged(); //will make the list update
     }
 
     private ArrayList<String> getList(){
@@ -65,15 +78,5 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        saveNotesToFile();
-    }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        readNotesFromFile();
-    }
 }

@@ -1,5 +1,7 @@
 package com.example.recyclerviewdemo.Storage;
 
+import android.util.Log;
+
 import com.example.recyclerviewdemo.Model.Note;
 
 import java.nio.file.FileStore;
@@ -12,6 +14,7 @@ public class NoteStorage {
     private static final String filename = "data.dat";
     static {
         list = new ArrayList<>();
+        //lav til 3 forskellige
         Note note = new Note("note 1", "body 1");
         list.add(note);
         list.add(note);
@@ -38,7 +41,10 @@ public class NoteStorage {
         Object object = fileStorage.readObject(filename);
         if (object != null){
             list = (List<Note>) object;
+            Log.i("all", "read list from file, size:" + list.size());
         }
+        else
+            Log.i("all", "NULL object from file");
     }
 
 
