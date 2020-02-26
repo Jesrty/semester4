@@ -47,6 +47,15 @@ public class NoteStorage {
             Log.i("all", "NULL object from file");
     }
 
+    public static void addToList(String headline, String body){
+        list.add(new Note(headline, body));
+    }
+    public static ArrayList<Note> getList(){
+        ArrayList<Note> mid = new ArrayList<>();
+        mid.addAll(list);
+        return mid;
+    }
+
 
     public static Note getNode(int index){
         return list.get(index);

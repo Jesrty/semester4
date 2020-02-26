@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.recyclerviewdemo.Model.Note;
 import com.example.recyclerviewdemo.Storage.NoteStorage;
+import com.example.recyclerviewdemo.view.ViewHolder;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -20,10 +21,11 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        int row = getIntent().getIntExtra(Viewholder.rowkey, 0 );
+        int row = getIntent().getIntExtra(ViewHolder.rowKey, 0 );
         textView = findViewById(R.id.textView);
         editText = findViewById(R.id.editText);
-        textView.setText(NoteStorage.);
+        textView.setText(NoteStorage.getNode(row).headline);
+        editText.setText(NoteStorage.getNode(row).body);
     }
 
     @Override

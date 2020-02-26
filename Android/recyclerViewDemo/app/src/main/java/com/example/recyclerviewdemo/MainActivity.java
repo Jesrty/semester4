@@ -5,30 +5,21 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.EditText;
 
 import com.example.recyclerviewdemo.Storage.FileStorage;
 import com.example.recyclerviewdemo.Storage.NoteStorage;
 import com.example.recyclerviewdemo.ad.MyRecycleViewAdapter;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-
-import static com.example.recyclerviewdemo.Storage.NoteStorage.readNotesFromFile;
-import static com.example.recyclerviewdemo.Storage.NoteStorage.saveNotesToFile;
-import static com.example.recyclerviewdemo.Storage.NoteStorage.setFileStorage;
 
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private EditText editText;
-    private ArrayList<String> list;
+    //private ArrayList<String> list;
     private MyRecycleViewAdapter myRecycleViewAdapter;
     private int postionHolder = -1;
 
@@ -42,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView1);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        myRecycleViewAdapter = new MyRecycleViewAdapter(getList());
+        myRecycleViewAdapter = new MyRecycleViewAdapter(NoteStorage.getList()/*getList()*/);
         recyclerView.setAdapter(myRecycleViewAdapter);
 
         NoteStorage.setFileStorage(new FileStorage(this));
@@ -58,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         NoteStorage.readNotesFromFile();
         myRecycleViewAdapter.notifyDataSetChanged(); //will make the list update
     }
-
+    /*
     private ArrayList<String> getList(){
         list = new ArrayList<>();
         list.add("the qutck brown fox");
@@ -68,11 +59,13 @@ public class MainActivity extends AppCompatActivity {
         list.add("again and again");
         return list;
     }
+     */
 
     public void addToList(View view){
         String headLine = editText.getText().toString();
         if (headLine.length() > 0){
-            list.add(headLine);
+            NoteStorage.addToList(headLine, "body: " + headLine);
+            //list.add(headLine);
             myRecycleViewAdapter.notifyDataSetChanged();
             editText.getText().clear();
         }

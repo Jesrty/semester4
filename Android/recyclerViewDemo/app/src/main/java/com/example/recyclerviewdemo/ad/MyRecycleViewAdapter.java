@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.recyclerviewdemo.Model.Note;
 import com.example.recyclerviewdemo.R;
 import com.example.recyclerviewdemo.Storage.NoteStorage;
 import com.example.recyclerviewdemo.view.ViewHolder;
@@ -16,9 +17,9 @@ import java.util.ArrayList;
 
 public class MyRecycleViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
-    private ArrayList<String> list;
+    private ArrayList<Note> list;
 
-    public MyRecycleViewAdapter(ArrayList<String> list) {
+    public MyRecycleViewAdapter(ArrayList<Note> list) {
         this.list = list;
     }
 
