@@ -5,16 +5,25 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
+import com.example.recyclerviewdemo.Model.Note;
 import com.example.recyclerviewdemo.Storage.FileStorage;
 import com.example.recyclerviewdemo.Storage.NoteStorage;
 import com.example.recyclerviewdemo.ad.MyRecycleViewAdapter;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
+
+    private final static String notes = "notes";
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -41,7 +50,27 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
     }
+
+    private void addNewNote(Note note) {
+        DocumentReference docRef = db.collection(notes).document();
+        Map<String, String> map = new HashMap<>();
+        map.put("head", note.headline);
+        map.put("body", note.body);
+        docRef.set(map);
+    }
+
+
+
+
+
+
+
+
+
 
     @Override
     protected void onResume() {
@@ -65,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         String headLine = editText.getText().toString();
         if (headLine.length() > 0){
             NoteStorage.addToList(headLine, "body: " + headLine);
+            addNewNote(new Note(headLine, ""));
             //list.add(headLine);
             myRecycleViewAdapter.notifyDataSetChanged();
             editText.getText().clear();
