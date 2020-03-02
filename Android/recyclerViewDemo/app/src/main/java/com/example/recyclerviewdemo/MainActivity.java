@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         String headLine = editText.getText().toString();
         if (headLine.length() > 0){
             NoteStorage.addToList(headLine, "body: " + headLine);
-            addNewNote(new Note(headLine, ""));
+            addNewNote(new Note(headLine, "body: " + headLine));
             //list.add(headLine);
             myRecycleViewAdapter.notifyDataSetChanged();
             editText.getText().clear();

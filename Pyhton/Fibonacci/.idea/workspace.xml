@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e35d03e7-ed09-4f54-a0a7-138342231838" name="Default Changelist" comment="" />
+    <list default="true" id="8862099b-b819-4a1d-bdb9-800746adaaf7" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,11 +18,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1YFczr9o7sPkqbfhohxHiftejZi" />
+  <component name="ProjectId" id="1YZ3oUxH74pT7cqtZl4Mn2BGtzs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -37,9 +36,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Main_v2">
-    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Mandatory1_Elementary_Cellular_Automaton" />
+  <component name="RunManager" selected="Python.recursive">
+    <configuration name="recursive" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Fibonacci" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -51,7 +50,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recursive.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -60,8 +59,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Main_v2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Mandatory1_Elementary_Cellular_Automaton" />
+    <configuration name="teacher_vertion" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Fibonacci" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -73,7 +72,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main_v2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/teacher_vertion.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="yieldThing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Fibonacci" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yieldThing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -84,8 +105,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Main_v2" />
-        <item itemvalue="Python.Main" />
+        <item itemvalue="Python.recursive" />
+        <item itemvalue="Python.teacher_vertion" />
+        <item itemvalue="Python.yieldThing" />
       </list>
     </recent_temporary>
   </component>
@@ -94,14 +116,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e35d03e7-ed09-4f54-a0a7-138342231838" name="Default Changelist" comment="" />
-      <created>1582542047528</created>
+      <changelist id="8862099b-b819-4a1d-bdb9-800746adaaf7" name="Default Changelist" comment="" />
+      <created>1583136463123</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1582542047528</updated>
-      <workItem from="1582542048875" duration="8302000" />
-      <workItem from="1583136402013" duration="580000" />
-      <workItem from="1583148218533" duration="6391000" />
+      <updated>1583136463123</updated>
+      <workItem from="1583136465996" duration="6192000" />
     </task>
     <servers />
   </component>
@@ -113,16 +133,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Mandatory1_Elementary_Cellular_Automaton$Main.coverage" NAME="Main Coverage Results" MODIFIED="1583148314406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mandatory1_Elementary_Cellular_Automaton$Main_v2.coverage" NAME="Main_v2 Coverage Results" MODIFIED="1583154873996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Fibonacci$recursive.coverage" NAME="recursive Coverage Results" MODIFIED="1583140353622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Fibonacci$teacher_vertion.coverage" NAME="teacher_vertion Coverage Results" MODIFIED="1583140299891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Fibonacci$yieldThing.coverage" NAME="yieldThing Coverage Results" MODIFIED="1583139140558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
