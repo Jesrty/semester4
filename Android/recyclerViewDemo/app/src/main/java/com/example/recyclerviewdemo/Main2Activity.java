@@ -31,6 +31,7 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        // her skal det være setNode og ikke getNode upsi upsi
         NoteStorage.getNode(row).headline = textView.getText().toString();
         NoteStorage.getNode(row).body = editText.getText().toString();
     }

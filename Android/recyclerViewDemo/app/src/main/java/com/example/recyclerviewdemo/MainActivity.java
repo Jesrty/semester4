@@ -48,11 +48,6 @@ public class MainActivity extends AppCompatActivity {
         NoteStorage.setFileStorage(new FileStorage(this));
         NoteStorage.saveNotesToFile();
 
-
-
-
-
-
     }
 
     private void addNewNote(Note note) {
@@ -62,13 +57,6 @@ public class MainActivity extends AppCompatActivity {
         map.put("body", note.body);
         docRef.set(map);
     }
-
-
-
-
-
-
-
 
 
 
