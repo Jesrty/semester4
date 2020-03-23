@@ -22,7 +22,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Vektor_test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../andres mandatory1/aaro0186_mari93fd.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -37,7 +37,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Main_v2">
+  <component name="RunManager" selected="Python.aaro0186_mari93fd">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Mandatory1_Elementary_Cellular_Automaton" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,8 +82,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="aaro0186_mari93fd" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Mandatory1_Elementary_Cellular_Automaton" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../andres mandatory1" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../andres mandatory1/aaro0186_mari93fd.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.aaro0186_mari93fd" />
         <item itemvalue="Python.Main_v2" />
         <item itemvalue="Python.Main" />
       </list>
@@ -103,7 +126,7 @@
       <workItem from="1583136402013" duration="580000" />
       <workItem from="1583148218533" duration="9793000" />
       <workItem from="1583670900059" duration="4994000" />
-      <workItem from="1584262165589" duration="4898000" />
+      <workItem from="1584262165589" duration="7003000" />
     </task>
     <servers />
   </component>
@@ -125,6 +148,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Mandatory1_Elementary_Cellular_Automaton$Main.coverage" NAME="Main Coverage Results" MODIFIED="1583148314406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mandatory1_Elementary_Cellular_Automaton$Main_v2.coverage" NAME="Main_v2 Coverage Results" MODIFIED="1584265804043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mandatory1_Elementary_Cellular_Automaton$aaro0186_mari93fd.coverage" NAME="aaro0186_mari93fd Coverage Results" MODIFIED="1584345704198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../andres mandatory1" />
+    <SUITE FILE_PATH="coverage/Mandatory1_Elementary_Cellular_Automaton$Main_v2.coverage" NAME="Main_v2 Coverage Results" MODIFIED="1584345554592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

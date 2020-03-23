@@ -1,1 +1,3 @@
 https://github.com/joneikholmkea/android-spring2020?fbclid=IwAR1Ip5pN0KekZQG3k6nfoQYl1h32zQE9AVxSy-7WuZU1hvhAWiSehn5PT4c
+
+MapLocationsAndFirebase is really good! (men har ikke en vertion selv og derfor heller ingen database til!)

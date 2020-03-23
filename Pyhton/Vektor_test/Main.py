@@ -1,6 +1,5 @@
 import math
 
-
 class Vektor:
     """
     >>> v1 = Vektor(2, 4)
