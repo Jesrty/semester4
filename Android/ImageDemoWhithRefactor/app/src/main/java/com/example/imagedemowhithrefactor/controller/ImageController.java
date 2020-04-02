@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Environment;
@@ -19,11 +20,13 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.UUID;
 
 public class ImageController {
 
     private MainActivity mainActivity;
+    Context context;
 
     public ImageController(MainActivity mainActivity) {
         this.mainActivity = mainActivity;
@@ -44,30 +47,29 @@ public class ImageController {
         if (requestCode == 1){
             Bitmap bitmap = (Bitmap) data.getExtras().get("data");
 
-            String root = Environment.getExternalStorageDirectory().toString();
-            File file = new File(root, "/saved_images");
-            if (!file.exists()){
-                file.mkdirs();
-            }
+            this.context = context;
 
+            String root = Environment.getExternalStorageDirectory().toString();
+            File dir = new File(root, "/saved_images");
+            if (!dir.exists()){
+                dir.mkdirs();
+            }
             String name = "Image-" + UUID.randomUUID().toString() + ".jpg";
-            File f = new File(file, name);
+            File file = new File(dir, name);
 
             try {
-                f.createNewFile();
-                FileOutputStream fos = new FileOutputStream(f);
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 90, fos);
+                file.createNewFile();
+                FileOutputStream fos = new FileOutputStream(file);
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 10, fos);
                 fos.flush();
                 fos.close();
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
-            MediaScannerConnection.scanFile(context, new String[]{f.toString()}, new String[]{f.getName()}, null);
+            MediaScannerConnection.scanFile(context, new String[]{file.toString()}, new String[]{file.getName()}, null);
 
             mainActivity.imageView.setImageBitmap(bitmap);
-
         }
     }
-
 }

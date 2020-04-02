@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         imageView = findViewById(R.id.imageView);
 
-        isStoragePermissionGranted();
+
 
         ic = new ImageController(this);
 
@@ -41,17 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void isStoragePermissionGranted() {
-        if (Build.VERSION.SDK_INT >= 23){
-            if ((this.checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)) == PackageManager.PERMISSION_GRANTED){
 
-            }
-            else {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-
-            }
-        }
-    }
 
     public void photoRollBtnPressed(View view){
         Intent intent = new Intent(Intent.ACTION_PICK);
@@ -66,8 +56,6 @@ public class MainActivity extends AppCompatActivity {
         ic.handleImageReturn(requestCode, data, this);
 
     }
-
-
 
     public void cameraBtnPressed(View view){
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
