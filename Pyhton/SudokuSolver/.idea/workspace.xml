@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7a68579-5b42-41f0-90d8-6bacf86f1100" name="Default Changelist" comment="" />
+    <list default="true" id="a9796fba-e233-4852-9960-4b8d4faf12e8" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1ZCvqBk7PuIlDIfxr0PdErDgztf" />
+  <component name="ProjectId" id="1ap2S3yFv7sc6MBrg2gOGJDC4Jx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -37,8 +37,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Mandelbot_numpy" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="mandelbrot_numpy" />
+    <configuration name="Sudoku" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SudokuSolver" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -50,7 +50,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Mandelbot_numpy.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sudoku.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -61,7 +61,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Mandelbot_numpy" />
+        <item itemvalue="Python.Sudoku" />
       </list>
     </recent_temporary>
   </component>
@@ -70,13 +70,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e7a68579-5b42-41f0-90d8-6bacf86f1100" name="Default Changelist" comment="" />
-      <created>1584356078586</created>
+      <changelist id="a9796fba-e233-4852-9960-4b8d4faf12e8" name="Default Changelist" comment="" />
+      <created>1587418210214</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1584356078586</updated>
-      <workItem from="1584356080823" duration="3549000" />
-      <workItem from="1587418139763" duration="658000" />
+      <updated>1587418210214</updated>
+      <workItem from="1587418212022" duration="4107000" />
     </task>
     <servers />
   </component>
@@ -88,15 +87,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/mandelbrot_numpy$Mandelbot_numpy.coverage" NAME="Mandelbot_numpy Coverage Results" MODIFIED="1584359054790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SudokuSolver$Sudoku.coverage" NAME="Sudoku Coverage Results" MODIFIED="1587480287872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
