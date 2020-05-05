@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1588288903 source:c:\users\ravn1\onedrive\skrivebord\semester_4\semester4\c\day1home_pointet_to_pointer\mandatory2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1588343296 source:c:\users\ravn1\onedrive\skrivebord\semester_4\semester4\c\mandatory2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Slotmachine.c"
+
+1588290954 c:\users\ravn1\onedrive\skrivebord\semester_4\semester4\c\mandatory2\onearmedbandit.h
+
+1588345639 c:\users\ravn1\onedrive\skrivebord\semester_4\semester4\c\mandatory2\slotmachine.h
+
+1588342896 c:\users\ravn1\onedrive\skrivebord\semester_4\semester4\c\mandatory2\slotmachine.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"Slotmachine.h"
+	"ExstraMethods.c"
+
+1588355448 c:\users\ravn1\onedrive\skrivebord\semester_4\semester4\c\mandatory2\exstramethods.c
+	<windows.h>
+
+1588340401 source:c:\users\ravn1\onedrive\skrivebord\semester_4\semester4\c\mandatory2\exstramethods.c
+	<windows.h>
+
+1588342896 source:c:\users\ravn1\onedrive\skrivebord\semester_4\semester4\c\mandatory2\slotmachine.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"Slotmachine.h"
+	"ExstraMethods.c"
+

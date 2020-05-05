@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1588609768 source:c:\users\ravn1\onedrive\skrivebord\semester_4\semester4\c\mandatory_2_jesper_ravn\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Slotmachine.c"
+
+1588609768 c:\users\ravn1\onedrive\skrivebord\semester_4\semester4\c\mandatory_2_jesper_ravn\slotmachine.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"Slotmachine.h"
+	"ExstraMethods.c"
+
+1588359225 c:\users\ravn1\onedrive\skrivebord\semester_4\semester4\c\mandatory_2_jesper_ravn\slotmachine.h
+
+1588609661 c:\users\ravn1\onedrive\skrivebord\semester_4\semester4\c\mandatory_2_jesper_ravn\exstramethods.c
+	<windows.h>
+	<stdbool.h>
+
