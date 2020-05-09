@@ -1,0 +1,2 @@
+rootProject.name='MobilePayAddon'
+include ':app'
