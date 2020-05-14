@@ -33,12 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         imageView = findViewById(R.id.imageView);
 
-
-
         ic = new ImageController(this);
-
-
-
     }
 
 
@@ -52,14 +47,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        System.out.println("test1");
         if(resultCode != -1) return; //-1 indicates ok
         ic.handleImageReturn(requestCode, data, this);
+        System.out.println("test2 " + data + " - " + requestCode);
 
     }
 
     public void cameraBtnPressed(View view){
+        System.out.println("test3");
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, 1);
+        System.out.println("test4");
     }
 
 }

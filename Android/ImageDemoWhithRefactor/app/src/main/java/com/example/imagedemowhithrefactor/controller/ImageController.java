@@ -26,7 +26,7 @@ import java.util.UUID;
 public class ImageController {
 
     private MainActivity mainActivity;
-    Context context;
+    private Context context;
 
     public ImageController(MainActivity mainActivity) {
         this.mainActivity = mainActivity;
@@ -45,9 +45,9 @@ public class ImageController {
             }
         }
         if (requestCode == 1){
-            Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-
+            System.out.println("test10");
             this.context = context;
+            Bitmap bitmap = (Bitmap) data.getExtras().get("data");
 
             String root = Environment.getExternalStorageDirectory().toString();
             File dir = new File(root, "/saved_images");
@@ -60,15 +60,15 @@ public class ImageController {
             try {
                 file.createNewFile();
                 FileOutputStream fos = new FileOutputStream(file);
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 10, fos);
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 90, fos);
                 fos.flush();
                 fos.close();
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
+            System.out.println("test11");
             MediaScannerConnection.scanFile(context, new String[]{file.toString()}, new String[]{file.getName()}, null);
-
             mainActivity.imageView.setImageBitmap(bitmap);
         }
     }
