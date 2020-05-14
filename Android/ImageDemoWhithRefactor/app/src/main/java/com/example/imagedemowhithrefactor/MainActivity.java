@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         imageView = findViewById(R.id.imageView);
 
         ic = new ImageController(this);
+        isStoragePermissionGranted();
     }
 
 
@@ -51,6 +52,23 @@ public class MainActivity extends AppCompatActivity {
         if(resultCode != -1) return; //-1 indicates ok
         ic.handleImageReturn(requestCode, data, this);
         System.out.println("test2 " + data + " - " + requestCode);
+
+    }
+
+    private boolean isStoragePermissionGranted(){
+        if (Build.VERSION.SDK_INT >= 23){
+            if ((this.checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED)){
+                System.out.println("Permission Granted");
+                return true;
+            }else{
+                System.out.println("Permission revoked");
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                return false;
+            }
+        }else{
+            System.out.println("Permission is granted");
+            return true;
+        }
 
     }
 
