@@ -53,7 +53,6 @@ class SudokuSolver:
             for j in range(x0 * 3, x0 * 3 + 3):
                 if self.board[i][j] == n and (i, j) != pos:
                     return False
-
         return True
 
     def solver(self):
@@ -72,9 +71,10 @@ class SudokuSolver:
                 self.board[row][col] = 0
         return False
 
-
+'''
 ss = SudokuSolver(myBoard)
 ss.print_board()
 print("\n\n")
 ss.solver()
 ss.print_board()
+'''

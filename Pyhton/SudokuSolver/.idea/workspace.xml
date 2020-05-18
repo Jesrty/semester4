@@ -22,6 +22,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Vektor_test" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -36,7 +37,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Sudoku">
+  <component name="RunManager" selected="Python.MySudokuSolver">
+    <configuration name="MySudokuSolver" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SudokuSolver" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MySudokuSolver.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Sudoku" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SudokuSolver" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,8 +128,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Sudoku" />
+        <item itemvalue="Python.MySudokuSolver" />
         <item itemvalue="Python.Sudoku_other" />
+        <item itemvalue="Python.Sudoku" />
         <item itemvalue="Python.sudoku_test" />
       </list>
     </recent_temporary>
@@ -123,6 +147,7 @@
       <updated>1587418210214</updated>
       <workItem from="1587418212022" duration="7405000" />
       <workItem from="1588349195179" duration="6521000" />
+      <workItem from="1589635156271" duration="11896000" />
     </task>
     <servers />
   </component>
@@ -144,7 +169,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SudokuSolver$sudoku_test.coverage" NAME="sudoku_test Coverage Results" MODIFIED="1588685127180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/SudokuSolver$Sudoku_other.coverage" NAME="Sudoku_other Coverage Results" MODIFIED="1588685132678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/SudokuSolver$Sudoku.coverage" NAME="Sudoku Coverage Results" MODIFIED="1588685933916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SudokuSolver$Sudoku_other.coverage" NAME="Sudoku_other Coverage Results" MODIFIED="1589716586260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SudokuSolver$MySudokuSolver.coverage" NAME="MySudokuSolver Coverage Results" MODIFIED="1589716590242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SudokuSolver$Sudoku.coverage" NAME="Sudoku Coverage Results" MODIFIED="1589636740477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
