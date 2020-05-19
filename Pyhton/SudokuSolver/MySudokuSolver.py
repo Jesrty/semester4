@@ -126,6 +126,7 @@ class MySudokuSolver:
 
                 # if no number match it back tracks and have 2 set the number too 0
                 self.board[row][col] = 0
+        # return false if no solution
         return False
 
 
