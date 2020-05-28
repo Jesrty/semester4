@@ -1,5 +1,6 @@
 import pygame
 from settings import *
+from time import sleep
 
 
 class Button:
@@ -17,11 +18,13 @@ class Button:
         self.highligthed = False
         self.param = param
 
-    def update(self, mouse):
+    def hoverButton(self, mouse):
         if self.rect.collidepoint(mouse):
             self.highligthed = True
+            return True
         else:
             self.highligthed = False
+            return False
 
     def draw(self, window):
         self.image.fill(self.highlightedColour if self.highligthed else self.colour)
@@ -32,10 +35,8 @@ class Button:
 
         window.blit(font, pos)
 
-    def click(self, mousePos, mouseClick):
-        if self.rect.collidepoint(mousePos) and mouseClick[0] == 1:
-            return True
-        return False
+
+
 
 
 

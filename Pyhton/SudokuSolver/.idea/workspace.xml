@@ -149,7 +149,7 @@
       <workItem from="1588349195179" duration="6521000" />
       <workItem from="1589635156271" duration="14577000" />
       <workItem from="1589889395764" duration="1631000" />
-      <workItem from="1589925246326" duration="2338000" />
+      <workItem from="1589925246326" duration="5203000" />
     </task>
     <servers />
   </component>
@@ -172,7 +172,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SudokuSolver$sudoku_test.coverage" NAME="sudoku_test Coverage Results" MODIFIED="1588685127180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SudokuSolver$Sudoku_other.coverage" NAME="Sudoku_other Coverage Results" MODIFIED="1589716586260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/SudokuSolver$MySudokuSolver.coverage" NAME="MySudokuSolver Coverage Results" MODIFIED="1589716590242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SudokuSolver$MySudokuSolver.coverage" NAME="MySudokuSolver Coverage Results" MODIFIED="1590279994768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SudokuSolver$Sudoku.coverage" NAME="Sudoku Coverage Results" MODIFIED="1589636740477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

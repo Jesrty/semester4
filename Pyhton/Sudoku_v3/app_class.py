@@ -1,6 +1,7 @@
 import sys
 from settings import *
 import copy
+from time import sleep
 from buttonClass import *
 
 
@@ -13,9 +14,7 @@ class App:
         self.selected = None
         self.mousePos = None
         self.state = "playing"
-        self.button1 = None
-        self.button2 = None
-        self.button3 = None
+        self.playingButton = []
         self.lockedCell = []
         self.font = pygame.font.SysFont("arial", cellSize//2)
         self.load()
@@ -52,36 +51,25 @@ class App:
                         self.grid[self.selected[1]][self.selected[0]] = int(event.unicode)
 
             # User button click
-
-
-
-
-
-
-
-
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if self.playingButton[0].hoverButton(self.mousePos):
+                    self.solver()
+                if self.playingButton[1].hoverButton(self.mousePos):
+                    self.play()
+                if self.playingButton[2].hoverButton(self.mousePos):
+                    self.clear()
 
     def playing_update(self):
         self.mousePos = pygame.mouse.get_pos()
-        mouseClick = pygame.mouse.get_pressed()
 
-        self.button1.update(self.mousePos)
-        self.button2.update(self.mousePos)
-        self.button3.update(self.mousePos)
-
-        if self.button1.click(self.mousePos, mouseClick):
-            self.solver()
-        elif self.button2.click(self.mousePos, mouseClick):
-            self.play()
-        elif self.button3.click(self.mousePos, mouseClick):
-            self.clear()
+        for button in self.playingButton:
+            button.hoverButton(self.mousePos)
 
     def playing_draw(self):
         self.window.fill(WHITE)
 
-        self.button1.draw(self.window)
-        self.button2.draw(self.window)
-        self.button3.draw(self.window)
+        for button in self.playingButton:
+            button.draw(self.window)
 
         if self.selected:
             self.drawSelected(self.window, self.selected)
@@ -125,9 +113,10 @@ class App:
         return ((self.mousePos[0]-gridPos[0])//cellSize, (self.mousePos[1]-gridPos[1])//cellSize)
 
     def loadButtons(self):
-        self.button1 = Button(gridPos[0], 40, 100, 40, text="Solver")
-        self.button2 = Button(gridPos[0]+110, 40, 100, 40, text="Play")
-        self.button3 = Button(gridPos[0]+220, 40, 100, 40, text="Clear")
+        self.playingButton.append(Button(gridPos[0], 40, 100, 40, text="Solver"))
+        self.playingButton.append(Button(gridPos[0]+110, 40, 100, 40, text="Play"))
+        self.playingButton.append(Button(gridPos[0]+220, 40, 100, 40, text="Clear"))
+
 
 
     def textToScreen(self, window, text, pos):
@@ -208,15 +197,15 @@ class App:
         return False
 
     def play(self):
-        self.grid = [[8, 0, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 0, 3, 6, 0, 0, 0, 0, 0],
-                    [0, 7, 0, 0, 9, 0, 2, 0, 0],
-                    [0, 5, 0, 0, 0, 7, 0, 0, 0],
-                    [0, 0, 0, 0, 4, 5, 7, 0, 0],
-                    [0, 0, 0, 1, 0, 0, 0, 3, 0],
-                    [0, 0, 1, 0, 0, 0, 0, 6, 8],
-                    [0, 0, 8, 5, 0, 0, 0, 1, 0],
-                    [0, 9, 0, 0, 0, 0, 4, 0, 0]]
+        self.grid = [[0, 0, 0, 7, 0, 0, 0, 0, 0],
+                    [1, 0, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 4, 3, 0, 2, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0, 6],
+                    [0, 0, 0, 5, 0, 9, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 4, 1, 8],
+                    [0, 0, 0, 0, 8, 1, 0, 0, 0],
+                    [0, 0, 2, 0, 0, 0, 0, 5, 0],
+                    [0, 4, 0, 0, 0, 0, 3, 0, 0]]
         # setting locked cells from og board
         for yidx, row in enumerate(self.grid):
             for xidx, num in enumerate(row):
@@ -226,6 +215,8 @@ class App:
     def clear(self):
         self.lockedCell.clear()
         self.grid = [[0 for y in range(9)] for x in range(9)]
+
+
 
     # Marcus hjælpe liste
     # 1 button ikke klikker mange gange
