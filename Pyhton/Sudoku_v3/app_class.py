@@ -1,7 +1,4 @@
 import sys
-from settings import *
-import copy
-from time import sleep
 from buttonClass import *
 
 
@@ -62,31 +59,41 @@ class App:
     def playing_update(self):
         self.mousePos = pygame.mouse.get_pos()
 
+        # change color when hovering
         for button in self.playingButton:
             button.hoverButton(self.mousePos)
 
     def playing_draw(self):
         self.window.fill(WHITE)
 
+        # draws the buttons
         for button in self.playingButton:
             button.draw(self.window)
 
+        # draws the clicked cell light blue
         if self.selected:
             self.drawSelected(self.window, self.selected)
 
+        # draw the locked cells gray
         self.shadeLockedCells(self.window, self.lockedCell)
 
-
+        # draws the numbers in the grid
         self.drawNumbers(self.window)
+
+        # draw the grid (the lines in square)
         self.drawGrid(self.window)
+
         pygame.display.update()
 
 ##### HELPER FUNKCTIONS #####
 
+    # draw the locked cells gray
     def shadeLockedCells(self, window, locked):
         for cell in locked:
+                           # Surface, color, Rect, width
             pygame.draw.rect(window, LOCKEDCELLCOLOUR, (cell[0]*cellSize+gridPos[0], cell[1]*cellSize+gridPos[1], cellSize, cellSize))
 
+    # draws the numbers in the grid
     def drawNumbers(self, window):
         for yidx, row in enumerate(self.grid):
             for xidx, num in enumerate(row):
@@ -94,16 +101,21 @@ class App:
                     pos = [xidx*cellSize+gridPos[0], yidx*cellSize+gridPos[1]]
                     self.textToScreen(window, str(num), pos)
 
-
+    # draws the clicked cell light blue
     def drawSelected(self, window, pos):
+                        # Surface, color, Rect, width
         pygame.draw.rect(window, LIGHTBLUE, ((pos[0]*cellSize)+gridPos[0], (pos[1]*cellSize)+gridPos[1], cellSize, cellSize))
 
+    # draw the grid (the lines in square)
     def drawGrid(self, window):
+        # draw the outer lines    Surface, color, Rect, width
         pygame.draw.rect(window, BLACK, (gridPos[0], gridPos[1], WIDTH-150, HEIGHT-150), 2)
+        # draws the lines insdie   Surface, color, Rect, width
         for x in range(9):
             pygame.draw.line(window, BLACK, (gridPos[0]+(x*cellSize), gridPos[1]), (gridPos[0]+(x*cellSize), gridPos[1]+450), 2 if x % 3 == 0 else 1)
             pygame.draw.line(window, BLACK, (gridPos[0], gridPos[1]+(x*cellSize)), (gridPos[0]+450, gridPos[1]+(x*cellSize)), 2 if x % 3 == 0 else 1)
 
+    # check if the mouse is on the bord  and returns cell pos fx (1,2)
     def mouseOnGrid(self):
         if self.mousePos[0] < gridPos[0] or self.mousePos[1] < gridPos[1]:
             return False
@@ -112,13 +124,13 @@ class App:
 
         return ((self.mousePos[0]-gridPos[0])//cellSize, (self.mousePos[1]-gridPos[1])//cellSize)
 
+    # load the buttons and add them 2 the button list
     def loadButtons(self):
         self.playingButton.append(Button(gridPos[0], 40, 100, 40, text="Solver"))
         self.playingButton.append(Button(gridPos[0]+110, 40, 100, 40, text="Play"))
         self.playingButton.append(Button(gridPos[0]+220, 40, 100, 40, text="Clear"))
 
-
-
+    # draw the text in the cells but could draw other things
     def textToScreen(self, window, text, pos):
         font = self.font.render(text, False, BLACK)
         fontWidth = font.get_width()
@@ -127,9 +139,11 @@ class App:
         pos[1] += (cellSize-fontHeight)//2
         window.blit(font, pos)
 
+    # the method called in the init
     def load(self):
         self.loadButtons()
 
+    # check if the given string is an int
     def isInt(self, string):
         try:
             int(string)
@@ -196,31 +210,30 @@ class App:
         # return false if no solution
         return False
 
+    # the play function thats called when you click the play button so it print the bord below
     def play(self):
-        self.grid = [[0, 0, 0, 7, 0, 0, 0, 0, 0],
-                    [1, 0, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 0, 0, 4, 3, 0, 2, 0, 0],
-                    [0, 0, 0, 0, 0, 0, 0, 0, 6],
-                    [0, 0, 0, 5, 0, 9, 0, 0, 0],
-                    [0, 0, 0, 0, 0, 0, 4, 1, 8],
-                    [0, 0, 0, 0, 8, 1, 0, 0, 0],
-                    [0, 0, 2, 0, 0, 0, 0, 5, 0],
-                    [0, 4, 0, 0, 0, 0, 3, 0, 0]]
+        self.grid = [[0, 0, 0, 0, 1, 0, 3, 0, 6],
+                    [0, 3, 0, 6, 0, 5, 0, 0, 9],
+                    [8, 6, 0, 4, 2, 0, 1, 5, 0],
+                    [0, 0, 0, 0, 0, 8, 0, 3, 1],
+                    [0, 8, 0, 2, 0, 1, 0, 6, 0],
+                    [1, 2, 0, 7, 0, 0, 0, 0, 0],
+                    [0, 9, 7, 0, 6, 4, 0, 1, 2],
+                    [2, 0, 0, 3, 0, 9, 0, 7, 0],
+                    [4, 0, 8, 0, 7, 0, 0, 0, 0]]
         # setting locked cells from og board
         for yidx, row in enumerate(self.grid):
             for xidx, num in enumerate(row):
                 if num != 0:
                     self.lockedCell.append((xidx, yidx))
 
+    # the clear function thats called when you click the clear button so it removes every thing from the bord
     def clear(self):
         self.lockedCell.clear()
         self.grid = [[0 for y in range(9)] for x in range(9)]
 
 
 
-    # Marcus hjælpe liste
-    # 1 button ikke klikker mange gange
-    # 2 self.grid = emptyboard vil fucke det op
 
 
 

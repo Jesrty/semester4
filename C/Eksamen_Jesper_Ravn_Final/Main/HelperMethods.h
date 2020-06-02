@@ -3,6 +3,4 @@
 
 unsigned int getUserInput();
 
-
-
 #endif 

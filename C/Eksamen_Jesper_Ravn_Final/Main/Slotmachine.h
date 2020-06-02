@@ -15,10 +15,12 @@ typedef struct slotM{
 int getMySlotMMoney();
 int rollCheck(char char1, char char2, char char3);
 void welcomeSMG();
-void roll(int delayTime);
+void roll();
+void rollMore();
 void moneyHandler(char char1, char char2, char char3);
 void statsHandler(char char1, char char2, char char3);
 void stats();
+void wheelInterrupt();
 
 
 

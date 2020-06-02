@@ -18,6 +18,7 @@ class Button:
         self.highligthed = False
         self.param = param
 
+    # change color when hovered and return true or false
     def hoverButton(self, mouse):
         if self.rect.collidepoint(mouse):
             self.highligthed = True
@@ -26,13 +27,13 @@ class Button:
             self.highligthed = False
             return False
 
+    # draw the button
     def draw(self, window):
         self.image.fill(self.highlightedColour if self.highligthed else self.colour)
         window.blit(self.image, self.pos)
 
         font = self.font.render(self.text, False, WHITE)
         pos = (self.pos[0]+(self.width//4), self.pos[1]+(self.height//8))
-
         window.blit(font, pos)
 
 
