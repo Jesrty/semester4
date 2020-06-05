@@ -1,0 +1,2 @@
+rootProject.name='ToiletApp_v2'
+include ':app'

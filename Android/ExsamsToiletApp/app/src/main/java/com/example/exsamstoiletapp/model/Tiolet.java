@@ -1,4 +1,4 @@
-package com.example.exsamstoiletapp;
+package com.example.exsamstoiletapp.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,26 +8,25 @@ public class Tiolet {
     private String name;
     private double lat;
     private double lon;
-    private List<String> toiletQList = new ArrayList<>();
+    private ArrayList<String> toiletQList = new ArrayList<>();
 
-    public List<String> getToiletQList() {
+    public ArrayList getToiletQList() {
         return toiletQList;
     }
 
 
-
-    public void addMan(String name){
+    public void addToQ(String name){
         toiletQList.add(name);
     }
-    public void removeMan(String name){
+    public void removeFromQ(String name){
         toiletQList.remove(name);
     }
 
-
-    public Tiolet(String name, double lat, double lon) {
+    public Tiolet(String name, double lat, double lon, ArrayList<String> toiletQList) {
         this.name = name;
         this.lat = lat;
         this.lon = lon;
+        this.toiletQList = toiletQList;
     }
 
     public String getName() {

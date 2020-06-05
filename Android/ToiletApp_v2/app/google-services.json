@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "971571664141",
+    "firebase_url": "https://exsamstoiletapp.firebaseio.com",
+    "project_id": "exsamstoiletapp",
+    "storage_bucket": "exsamstoiletapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971571664141:android:b8b8c09a3cefe33a020c44",
+        "android_client_info": {
+          "package_name": "com.example.exsamstoiletapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971571664141-dk7iup3m4e58agr5fm3tq19efi2d971v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.exsamstoiletapp",
+            "certificate_hash": "50b0d16ace6255895559a32b063bc39a6a489346"
+          }
+        },
+        {
+          "client_id": "971571664141-be9jlk7l2dcl1dqvkm7mj3uqib4kepsm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUM2NFI_E1dhMmhOytQYJvWy68lXXKFiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971571664141-be9jlk7l2dcl1dqvkm7mj3uqib4kepsm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971571664141:android:c0fd554bb713cccb020c44",
+        "android_client_info": {
+          "package_name": "com.example.toiletapp_v2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971571664141-be9jlk7l2dcl1dqvkm7mj3uqib4kepsm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUM2NFI_E1dhMmhOytQYJvWy68lXXKFiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971571664141-be9jlk7l2dcl1dqvkm7mj3uqib4kepsm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

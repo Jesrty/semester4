@@ -75,12 +75,12 @@ void roll(){
   //give a new seed to the random fucktion based on the time the program have been running
   randomSeed(millis());
 
-  //the wheels spins from 0-9 random 
-  int wheel1SpinRandom = random(10);
+  //the wheels spins from 2-11 random 
+  int wheel1SpinRandom = random(2, 12);
   int spin1Counter = 0;
-  int wheel2SpinRandom = random(10);
+  int wheel2SpinRandom = random(2, 12);
   int spin2Counter = 0;
-  int wheel3SpinRandom = random(10);
+  int wheel3SpinRandom = random(2, 12);
   int spin3Counter = 0;
 
   //wheel 3 print untill stop
@@ -199,9 +199,9 @@ void rollMore(){
   randomSeed(millis());
 
   //random number for the char selection
-  int wheel1SpinRandom = random(1, 11);
-  int wheel2SpinRandom = random(1, 11);
-  int wheel3SpinRandom = random(1, 11);
+  int wheel1SpinRandom = random(wheelLength);
+  int wheel2SpinRandom = random(wheelLength);
+  int wheel3SpinRandom = random(wheelLength);
 
   //change the wheel positions
   for(int i = 0; i < wheel1SpinRandom; i++){
