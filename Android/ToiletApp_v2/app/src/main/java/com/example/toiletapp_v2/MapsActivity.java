@@ -66,14 +66,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
 
+
         locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
+                //System.out.println("------------------------------ " + MainActivity.testLon + " " + MainActivity.testLat);
                 LatLng position = new LatLng(location.getLatitude(), location.getLongitude());
                 mMap.addMarker(new MarkerOptions().position(position)
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
                         .title("You are here"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(position, 13));
+
             }
 
             @Override
@@ -113,11 +116,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         for (int i = 0; i < MainActivity.toilets.size(); i++) {
             LatLng position = new LatLng(MainActivity.toilets.get(i).getLat(), MainActivity.toilets.get(i).getLon());
 
-
             mMap.addMarker(new MarkerOptions().position(position)
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
                     .title(MainActivity.toilets.get(i).getName()));
-
 
         }
     }

@@ -1,6 +1,7 @@
 package com.example.toiletapp_v2.model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Tiolet {
     private String name;
@@ -8,7 +9,7 @@ public class Tiolet {
     private double lon;
     private ArrayList<String> toiletQList = new ArrayList<>();
 
-    public ArrayList getToiletQList() {
+    public ArrayList<String> getToiletQList() {
         return toiletQList;
     }
 
@@ -26,7 +27,11 @@ public class Tiolet {
         this.lon = lon;
         this.toiletQList = toiletQList;
     }
-
+    public Tiolet(String name, double lat, double lon) {
+        this.name = name;
+        this.lat = lat;
+        this.lon = lon;
+    }
     public String getName() {
         return name;
     }
